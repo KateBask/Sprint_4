@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
+
 public class OrderPage extends BasePage {
     //Поле Имя
     private final By nameFaild = By.xpath(".//div[2]/div[1]/input");
@@ -15,10 +17,10 @@ public class OrderPage extends BasePage {
     // Поле Адрес
     private final By addressFaild = By.xpath(".//div[2]/div[3]/input");
     // Поле Станция метро
-    private final By subwayFaild = By.xpath(".//input[@class='select-search__input']");
+    protected final By subwayFaild = By.xpath(".//input[@class='select-search__input']");
     // Элемент выпадающего списка
-    protected final By subwayStation1 = By.xpath(".//input[@ value= 'Сокольники']");
-    protected final By subwayStation2 = By.xpath(".//input[@ value= 'Красносельская']");
+    protected final By subwayStation1 = By.xpath("//div[@class='select-search__select']/ul/li[1]");
+    protected final By subwayStation2 = By.xpath("//div[@class='select-search__select']/ul/li[23]");
     // Поле Номер телефона
     private final By phoneFaild = By.xpath(".//div[2]/div[5]/input");
     // Кнопка Далее
@@ -33,8 +35,6 @@ public class OrderPage extends BasePage {
     // Выпадающий список
     protected final By listTenancy1 = By.xpath("//div[@class='Dropdown-menu']/div[1]");
     protected final By listTenancy2 = By.xpath("//div[@class='Dropdown-menu']/div[last()]");
-    // Поле цвет самоката
-    //private final By colorScooterFaild = By.className("Order_Checkboxes__3lWSI");
     // Чекбокс Черный
     protected final By checkboxBlack = By.id("black");
     // Чекбокс Серый
@@ -108,7 +108,7 @@ public class OrderPage extends BasePage {
     }
 
     // метод заполняет поле Комментарий
-    public void setcommentFaild(String comment) {
+    public void setCommentFaild(String comment) {
         webDriver.findElement(commentFaild).sendKeys(comment);
     }
 
@@ -128,8 +128,9 @@ public class OrderPage extends BasePage {
             return webDriver.findElement(popUpOrderComplete).isDisplayed();
         }
         //скролл к нужному полю
-        public void scrollTo (By field){
+       public void scrollTo (By field){
             WebElement element = webDriver.findElement(field);
             ((JavascriptExecutor) webDriver).executeScript("arguments[0].scrollIntoView();", element);
         }
-    }
+
+}

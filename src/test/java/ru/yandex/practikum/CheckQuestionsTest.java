@@ -2,15 +2,12 @@ package ru.yandex.practikum;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class CheckQuestionsTest extends BaseUITest {
 
     @Test
-    public void question1ShouldOpenAnswer1(){
+    public void question1ShouldOpenAnswer1() {
         MainPage mainPage = new MainPage(webDriver);
         mainPage.open();
         mainPage.clickOnBtnCookieClose();
@@ -19,7 +16,9 @@ public class CheckQuestionsTest extends BaseUITest {
         boolean isDisplayed = mainPage.checkRightAnswerIsDisplayed(mainPage.question1);
         Assert.assertTrue("Не отображается правильный ответ", isDisplayed);
     }
-    public void question2ShouldOpenAnswer2(){
+
+    @Test
+    public void question2ShouldOpenAnswer2() {
         MainPage mainPage = new MainPage(webDriver);
         mainPage.open();
         mainPage.clickOnBtnCookieClose();
@@ -28,7 +27,9 @@ public class CheckQuestionsTest extends BaseUITest {
         boolean isDisplayed = mainPage.checkRightAnswerIsDisplayed(mainPage.question2);
         Assert.assertTrue("Не отображается правильный ответ", isDisplayed);
     }
-    public void question3ShouldOpenAnswer3(){
+
+    @Test
+    public void question3ShouldOpenAnswer3() {
         MainPage mainPage = new MainPage(webDriver);
         mainPage.open();
         mainPage.clickOnBtnCookieClose();
@@ -37,7 +38,9 @@ public class CheckQuestionsTest extends BaseUITest {
         boolean isDisplayed = mainPage.checkRightAnswerIsDisplayed(mainPage.question3);
         Assert.assertTrue("Не отображается правильный ответ", isDisplayed);
     }
-    public void question4ShouldOpenAnswer4(){
+
+    @Test
+    public void question4ShouldOpenAnswer4() {
         MainPage mainPage = new MainPage(webDriver);
         mainPage.open();
         mainPage.clickOnBtnCookieClose();
@@ -46,7 +49,9 @@ public class CheckQuestionsTest extends BaseUITest {
         boolean isDisplayed = mainPage.checkRightAnswerIsDisplayed(mainPage.question4);
         Assert.assertTrue("Не отображается правильный ответ", isDisplayed);
     }
-    public void question5ShouldOpenAnswer5(){
+
+    @Test
+    public void question5ShouldOpenAnswer5() {
         MainPage mainPage = new MainPage(webDriver);
         mainPage.open();
         mainPage.clickOnBtnCookieClose();
@@ -55,7 +60,9 @@ public class CheckQuestionsTest extends BaseUITest {
         boolean isDisplayed = mainPage.checkRightAnswerIsDisplayed(mainPage.question5);
         Assert.assertTrue("Не отображается правильный ответ", isDisplayed);
     }
-    public void question6ShouldOpenAnswer6(){
+
+    @Test
+    public void question6ShouldOpenAnswer6() {
         MainPage mainPage = new MainPage(webDriver);
         mainPage.open();
         mainPage.clickOnBtnCookieClose();
@@ -64,7 +71,9 @@ public class CheckQuestionsTest extends BaseUITest {
         boolean isDisplayed = mainPage.checkRightAnswerIsDisplayed(mainPage.question6);
         Assert.assertTrue("Не отображается правильный ответ", isDisplayed);
     }
-    public void question7ShouldOpenAnswer7(){
+
+    @Test
+    public void question7ShouldOpenAnswer7() {
         MainPage mainPage = new MainPage(webDriver);
         mainPage.open();
         mainPage.clickOnBtnCookieClose();
@@ -73,7 +82,9 @@ public class CheckQuestionsTest extends BaseUITest {
         boolean isDisplayed = mainPage.checkRightAnswerIsDisplayed(mainPage.question7);
         Assert.assertTrue("Не отображается правильный ответ", isDisplayed);
     }
-    public void question8ShouldOpenAnswer8(){
+
+    @Test
+    public void question8ShouldOpenAnswer8() {
         MainPage mainPage = new MainPage(webDriver);
         mainPage.open();
         mainPage.clickOnBtnCookieClose();

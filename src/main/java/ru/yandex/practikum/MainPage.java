@@ -20,32 +20,39 @@ public class MainPage extends BasePage {
     protected final By question8 = By.xpath("//*[@id=\"accordion__heading-7\"]");//вопрос о важном 8
     protected final By btnOrder = By.xpath(".//button[text()='Заказать']"); //кнопка Заказать 1
     protected WebDriver webDriver;
+
     public MainPage (WebDriver webDriver) {
-     super(webDriver);
+        super(webDriver);
     }
+
     //метод открывает сайт
     public void open() {
         webDriver.get("https://qa-scooter.praktikum-services.ru/");
     }
+
     // метод закрывает куки-окно
     public void clickOnBtnCookieClose() {
-            webDriver.findElement(btnCookieClose).click();
-        }
-        //метод скролит до нужного элемента
-    public void scrollTo(By field) {
-        WebElement element =  webDriver.findElement(field);
-        ((JavascriptExecutor)webDriver).executeScript("arguments[0].scrollIntoView();", element);
+        webDriver.findElement(btnCookieClose).click();
     }
-        // метод нажимает на вопрос
+
+    //метод скролит до нужного элемента
+    public void scrollTo(By field) {
+        WebElement element = webDriver.findElement(field);
+        ((JavascriptExecutor) webDriver).executeScript("arguments[0].scrollIntoView();", element);
+    }
+
+    // метод нажимает на вопрос
     public void clickOnQuestion(By field) {
         webDriver.findElement(field).click();
     }
+
     //метод проверяет отображение ответа
     public boolean checkRightAnswerIsDisplayed(By field) {
         new WebDriverWait(webDriver, 3)
                 .until(ExpectedConditions.visibilityOfElementLocated(field));
         return webDriver.findElement(field).isDisplayed();
     }
+
     // метод нажимает на кнопку Заказать
     public void clickOnBtnOrder() {
         webDriver.findElement(btnOrder).click();
