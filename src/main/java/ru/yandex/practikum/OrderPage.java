@@ -42,7 +42,7 @@ public class OrderPage extends BasePage {
     // Поле комментарий
     private final By commentFaild = By.xpath(".//input[@placeholder='Комментарий для курьера']");
     // Кнопка Заказать
-    private final By btnOrder = By.className("Button_Button__ra12g Button_Middle__1CSJM");
+    private final By btnOrder = By.xpath("//div[@class='Order_Buttons__1xGrp']/button[text()='Заказать']");
     // Кнопка Заказать ДА
     private final By orderYesBtn = By.xpath("//div[@class='Order_Buttons__1xGrp']/button[text()='Да']");
     //Поп-ап об успешном заказе

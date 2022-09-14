@@ -19,11 +19,10 @@ public class MainPage extends BasePage {
     protected final By question7 = By.xpath("//*[@id=\"accordion__heading-6\"]");//вопрос о важном 7
     protected final By question8 = By.xpath("//*[@id=\"accordion__heading-7\"]");//вопрос о важном 8
     protected final By btnOrder = By.xpath(".//button[text()='Заказать']"); //кнопка Заказать 1
-    protected WebDriver webDriver;
-
-    public MainPage (WebDriver webDriver) {
-        super(webDriver);
+    protected MainPage (WebDriver webDriver) {
+        super(webDriver) ;
     }
+
 
     //метод открывает сайт
     public void open() {

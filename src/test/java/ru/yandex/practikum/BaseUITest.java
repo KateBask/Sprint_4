@@ -6,18 +6,19 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.html5.WebStorage;
 
 import java.util.concurrent.TimeUnit;
 
 public abstract class BaseUITest {
-    protected static WebDriver webDriver = new ChromeDriver(); //Chrome
-    // protected static WebDriver webDriver = new FirefoxDriver(); //Firefox
-
+    protected static WebDriver webDriver;
     @BeforeClass
     public static void setup() {
-        WebDriverManager.chromedriver().setup();
-        // WebDriverManager.firefoxdriver().setup();
+        // WebDriverManager.chromedriver().setup();
+   //  webDriver = new ChromeDriver();
+        WebDriverManager.firefoxdriver().setup();
+        webDriver = new FirefoxDriver();
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
